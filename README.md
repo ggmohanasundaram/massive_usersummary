@@ -1,6 +1,5 @@
 # Massive User Summary
-
-#OverView
+# OverView
     Massive user summary contais 3 majoy components
         1. DetailDataGenerator(app/src/data/detail_data_generator.py) - emits the raw data into kafka 
         2. SummaryDataGenerator(app/src/data/summary_data_generator.py) - consume the raw data from kafka,validate 
@@ -10,7 +9,7 @@
         3. SummaryDataReader(app/src/data/summary_data_generator.py) - consume the user_summary data from kafka
 
 
-#Highlights
+# Highlights
     1. Kafka configurations have been decoupled from code, hence the code can be run with 
        differnt kafka configuratios. 
     2. SummaryDataGenerator filters invalid/position messages from kafka and maintain them in a list.
@@ -26,14 +25,14 @@
               else if lastseen <  ['Metadata']['timestamp'] 
                 update ['Metadata']['timestamp'] as lastseen and send a user summary
                 
-#How To Run
+# How To Run
     Step 1 : pip install -r requirements.txt
     Step 2 : python main.py --configname application_config.yaml --messagecount 10
              application_config.yaml(app\src\config\application_config.yaml) - contains kafka configuration
              messagecount - Number of Raw messages which DetailDataGenerator to produce
              
              
-#Unit Tests
+# Unit Tests
     massive_usersummary/app/test
              
              
