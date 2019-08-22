@@ -1,0 +1,160 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+      "userId",
+      "visitorId",
+      "type",
+      "Metadata",
+      "event",
+      "eventData"
+   ],
+   "properties": {
+      "userId": {
+        "$id": "#/properties/userId",
+        "type": "string",
+        "title": "The Userid Schema",
+        "default": "",
+        "examples": [
+          "j11288090"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "visitorId": {
+        "$id": "#/properties/visitorId",
+        "type": "string",
+        "title": "The Visitorid Schema",
+        "default": "",
+        "examples": [
+          "jas8v98171"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "type": {
+        "$id": "#/properties/type",
+        "type": "string",
+        "title": "The Type Schema",
+        "default": "",
+        "examples": [
+          "Event"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "Metadata": {
+        "$id": "#/properties/Metadata",
+        "type": "object",
+        "title": "The Metadata Schema",
+        "required": [
+          "messageId",
+          "sentAt",
+          "timestamp",
+          "receivedAt",
+          "apiKey",
+          "spaceId",
+          "version"
+       ],
+        "properties": {
+          "messageId": {
+            "$id": "#/properties/Metadata/properties/messageId",
+            "type": "string",
+            "title": "The Messageid Schema",
+            "default": "",
+            "examples": [
+              "123sfdafas-32487239857dsh98234"
+            ],
+           "pattern": "^(.*)$"
+          },
+          "sentAt": {
+            "$id": "#/properties/Metadata/properties/sentAt",
+            "type": "integer",
+            "title": "The Sentat Schema",
+            "default": 0,
+            "examples": [
+              1534382478
+            ]
+          },
+          "timestamp": {
+            "$id": "#/properties/Metadata/properties/timestamp",
+           "type": "integer",
+            "title": "The Timestamp Schema",
+            "default": 0,
+            "examples": [
+              1534382478
+            ]
+          },
+          "receivedAt": {
+            "$id": "#/properties/Metadata/properties/receivedAt",
+            "type": "integer",
+            "title": "The Receivedat Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "apiKey": {
+            "$id": "#/properties/Metadata/properties/apiKey",
+            "type": "string",
+          "title": "The Apikey Schema",
+           "default": "",
+           "examples": [
+             ""
+           ],
+           "pattern": "^(.*)$"
+         },
+         "spaceId": {
+           "$id": "#/properties/Metadata/properties/spaceId",
+           "type": "string",
+           "title": "The Spaceid Schema",
+           "default": "",
+           "examples": [
+             ""
+           ],
+           "pattern": "^(.*)$"
+         },
+         "version": {
+           "$id": "#/properties/Metadata/properties/version",
+           "type": "string",
+           "title": "The Version Schema",
+           "default": "",
+           "examples": [
+             "v1"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "event": {
+       "$id": "#/properties/event",
+       "type": "string",
+       "title": "The Event Schema",
+       "default": "",
+       "examples": [
+         "Played Movie"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "eventData": {
+       "$id": "#/properties/eventData",
+       "type": "object",
+       "title": "The Eventdata Schema",
+       "required": [
+         "MovieID"
+       ],
+      "properties": {
+         "MovieID": {
+           "$id": "#/properties/eventData/properties/MovieID",
+           "type": "string",
+           "title": "The Movieid Schema",
+           "default": "",
+           "examples": [
+             "MIM4ddd4"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     }
+   }
+ }

@@ -1,0 +1,11 @@
+kafka:
+  raw_topic: 288jgwj2-mg-detail
+  summary_topic: 288jgwj2-mg-summary
+  connection:
+     bootstrap.servers: velomobile-01.srvs.cloudkafka.com:9094,velomobile-02.srvs.cloudkafka.com:9094,velomobile-03.srvs.cloudkafka.com:9094
+     session.timeout.ms: 6000
+     default.topic.config: {'auto.offset.reset': 'earliest'}
+     security.protocol: SASL_SSL
+     sasl.mechanisms: SCRAM-SHA-256
+     sasl.username: 288jgwj2
+     sasl.password: 3-BW45B_GAqnPZEmfvsO3Lgj5UBBkcNg
