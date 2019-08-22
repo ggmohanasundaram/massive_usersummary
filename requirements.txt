@@ -1,0 +1,3 @@
+jsonschema
+PyYaml
+confluent_kafka
